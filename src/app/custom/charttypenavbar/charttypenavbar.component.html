@@ -1,0 +1,27 @@
+<button mat-button [matMenuTriggerFor]="aboveMenu">Comparison</button>
+<mat-menu #aboveMenu="matMenu" yPosition="below">
+  <button mat-menu-item (click)="generate('column')" >Vertical Bar</button>
+  <button mat-menu-item (click)="select('bar')">Horizontal Bar</button>
+  <button mat-menu-item (click)="generate('Scolumn')">Stacked Horizontal</button>
+  <button mat-menu-item (click)="generate('Sbar')">Stacked Vertical</button>
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="belowMenu">Trend</button>
+<mat-menu #belowMenu="matMenu" yPosition="below">
+  <button mat-menu-item  (click)="select('line')">Line</button>
+  <button mat-menu-item (click)="select('dual')">Dual axis</button>
+  <button mat-menu-item (click)="select('area')">Area</button>
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="beforeMenu">Composition</button>
+<mat-menu #beforeMenu="matMenu" xPosition="after">
+  <button mat-menu-item (click)="select('pie')">Pie Chart</button>
+  <button mat-menu-item (click)="select('donut')">Donut</button>
+  <button mat-menu-item (click)="select('polar')">semi-Donut</button>  
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="afterMenu">Distribution</button>
+<mat-menu #afterMenu="matMenu" xPosition="after">
+  <button mat-menu-item (click)="select('bubble')">Bubble charts</button>
+  <button mat-menu-item (click)="select('scatter')">Scatter plot</button>
+</mat-menu>

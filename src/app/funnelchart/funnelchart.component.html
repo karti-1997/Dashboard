@@ -1,0 +1,20 @@
+<!--style="width: 50%;padding:1 rem;"-->
+<mat-card class="disable" style="margin-left: 55%; margin-top: 3%;">
+    <!-- <mat-icon style="margin-left: 300px;">description</mat-icon> -->
+<div>
+    <!--canvas baseChart 
+        [datasets]="bubbleChartData" 
+        [labels]="bubbleChartLabels" 
+        [options]="bubbleChartOptions"
+        [colors]="bubbleChartColors" 
+        [legend]="bubbleChartLegend" 
+        [chartType]="bubbleChartType" 
+    >
+    </canvas-->
+    <highcharts-chart
+   [Highcharts] = "highcharts" 
+   [options] = "chartOptions" 
+   style = "width: 100%; height: 400px; display: block;">
+   </highcharts-chart>
+</div>
+</mat-card>

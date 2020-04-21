@@ -1,0 +1,57 @@
+<!--mat-card class="example-card"-->
+    <!--mat-card-header>
+      <mat-card-title>Login</mat-card-title>
+    </mat-card-header-->
+    <!--mat-spinner *ngIf="isLoading"></mat-spinner>
+    <mat-card-content>
+      <form class="example-form" (submit)="onConnect(connectForm)" #connectForm="ngForm" *ngIf="!isLoading">
+        <table cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field>
+              <input matInput placeholder="host" ngModel name="hostname" #hostnameInput="ngModel" required>
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+            <td><mat-form-field>
+              <input matInput placeholder="user" ngModel name="user" #userInput="ngModel" required>
+            </mat-form-field></td>
+           </tr>
+          <tr>
+          <td><mat-form-field>
+            <input matInput placeholder="Password" ngModel type="password" name="password" #passwordInput="ngModel" >
+          </mat-form-field></td>
+         </tr>
+         <tr>
+            <td><mat-form-field>
+              <input matInput placeholder="database" ngModel name="database" #databaseInput="ngModel" required>
+            </mat-form-field></td>
+        </tr>
+        <tr>
+          <td><mat-form-field>
+            <input matInput placeholder="tablename" ngModel name="tablename" #tablenameInput="ngModel" required>
+          </mat-form-field></td>
+         </tr>
+         <tr>
+         <td>
+            <button mat-raised-button color="accent" type="submit">Connect</button>
+         </td>
+         </tr>
+      </table>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  <mat-accordion >
+    <mat-expansion-panel *ngFor="let database of databases">
+      <mat-expansion-panel-header >
+        {{database}}
+      </mat-expansion-panel-header>
+      <mat-action-row>
+        <button mat-raised-button color="primary" (click)="onviewfield(database)">Fields</button>
+    </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion-->
+<footer>
+  &copy; All Rights reserved JR 2020
+</footer>

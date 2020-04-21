@@ -1,0 +1,53 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-icon-button>
+        <mat-icon *ngIf="user" (click)="sidenav.toggle()">menu</mat-icon>
+      </button>
+      <h1>Library Dashboard</h1>
+      <span class="menu-spacer"></span>
+      <div>
+      <a mat-button *ngIf="notuser" (click)="openDialog()" >LOGIN</a>
+      <div *ngIf="user">
+        <a mat-button (click)="onloggedout()" routerLink="/" routerLinkActive="active">LOGOUT</a>
+      </div>
+      <!--a mat-button (click)="openDialog()" (click)="onlogined()" routerLink="/Login" routerLinkActive="active">LOGIN</a>
+      <a mat-button (click)="onloggedout()" *ngIf="isuser" routerLink="/create" routerLinkActive="active">LOGOUT</a-->
+      </div>
+  </mat-toolbar-row>
+  </mat-toolbar>
+  <div *ngIf="notuser">
+    <app-general-dashboard></app-general-dashboard>
+    <!--app-create></app-create-->
+  </div>
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav>
+      <mat-nav-list>
+        <div class="profile-card">
+          <div class="header">
+            <h2>Librarian </h2>
+            <h4>Grdmemoriallibrary@gmail.com</h4>
+          </div>
+          <img src="https://image.freepik.com/free-vector/stack-books-pile-books-vector-illustration-icon-stack-books-flat-style_87946-647.jpg" alt="book">
+          <!--img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Caesar"-->
+        </div>
+        <mat-divider></mat-divider>
+      
+        <h2 matSubheader>Pages</h2>
+        <a mat-list-item (click)="sidenav.toggle()"  routerLink="/visitordashboard" routerLinkActive="active"> Gatecount</a>
+        <a mat-list-item (click)="sidenav.toggle()" routerLink="/bookusage" routerLinkActive="active"> BOOKS </a>
+        <a mat-list-item (click)="sidenav.toggle()"  routerLink="/counter" routerLinkActive="active"> Counters </a>
+        <a mat-list-item (click)="sidenav.toggle()"  routerLink="/custom" routerLinkActive="active"> Custom </a>
+        <mat-divider></mat-divider>
+      <!--mat-nav-list>
+        <a mat-list-item (click)="sidenav.toggle()"  routerLink="/visitordashboard" routerLinkActive="active"> Gatecount</a>
+        <a mat-list-item (click)="sidenav.toggle()" routerLink="/bookusage" routerLinkActive="active"> BOOKS </a>
+        <a mat-list-item (click)="sidenav.toggle()"  routerLink="/counter" routerLinkActive="active"> Counters </a>
+      </mat-nav-list-->
+    </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div>
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

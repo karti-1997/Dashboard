@@ -1,0 +1,24 @@
+<!--style="width: 50%;padding:1 'rem;"-->
+<mat-card class="disable" style="margin-left: 1%; margin-top: 2%;">
+<p>Gate count</p>
+<!--mat-icon style="margin-left: 300px;">description</mat-icon-->
+<button mat-button 
+[matMenuTriggerFor]="menu"
+color="primary">
+<mat-icon style="margin-left: 300px;">menu</mat-icon>
+</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="gateCountToday()">Today</button>
+    <button mat-menu-item (click)="gateCountMonth()">This month</button>
+    <button mat-menu-item (click)="gateCountYear()">This Year</button>
+    <!--button mat-menu-item (click)="zoomIn()">zoom in</button-->
+  </mat-menu>
+<div>
+    <canvas baseChart 
+    [datasets]="ChartData"
+    [labels]="ChartLabels"
+    [options]="ChartOptions"
+    [chartType]="ChartType">
+  </canvas>
+</div>
+</mat-card>

@@ -1,0 +1,66 @@
+<!--h1  mat-dialog-title>Message</h1>
+    <mat-dialog-content>  </mat-dialog-content>
+<mat-dialog-actions>
+    <button  mat-raised-button (click)="closeMe()">Close</button>
+</mat-dialog-actions-->
+
+
+<!--h1 mat-dialog-title>Hi {{data.name}}</h1>
+<div mat-dialog-content >
+<form class="example-form" (submit)="onLogin(loginForm)" #loginForm="ngForm" *ngIf="!isLoading"></form>
+  <p>What's your favorite animal?</p>
+  <mat-form-field>
+    <mat-label>Favorite Animal</mat-label>
+    <input matInput [(ngModel)]="data.animal">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close] (click)="ongenerate()" cdkFocusInitial>Generate</button>
+  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+</div!-->
+
+<mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{data.charttype}}</mat-card-title>
+    </mat-card-header>
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+    <mat-card-content>
+      <form class="example-form" (submit)="ongenerate(loginForm)" #loginForm="ngForm" *ngIf="!isLoading">
+        <table cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field>
+              <input matInput placeholder="Title" ngModel name="charttitle" #charttitle="ngModel" required>
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <mat-form-field>
+              <input matInput placeholder="Sub Title" ngModel name="subtitle" #subtitle="ngModel">
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+          <td><mat-form-field>
+            <input matInput placeholder="X-axis" ngModel  name="Xaxis" #Xaxis="ngModel" required>
+          </mat-form-field></td>
+         </tr>
+         <tr>
+            <td><mat-form-field>
+              <input matInput placeholder="Y-axis" ngModel name="Yaxis" #Yaxis="ngModel" required>
+            </mat-form-field></td>
+           </tr>
+         <tr>
+         <td>
+            <button mat-raised-button [mat-dialog-close] color="accent" type="submit">Generate</button>
+         </td>
+         </tr>
+      </table>
+      </form>
+      <!--mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner-->
+    </mat-card-content>
+    <!--mat-card-actions>
+      <button mat-raised-button (click)="onLogin(loginform)" color="accent">Login</button>
+    </mat-card-actions-->
+  </mat-card>

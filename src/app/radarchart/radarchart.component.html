@@ -1,0 +1,12 @@
+<mat-card class="disable" style="margin-left: 52%; margin-top: -30%;">
+    <p>Book Usage</p>
+    <!-- <mat-icon style="margin-left: 300px;">description</mat-icon> -->
+    <div class="chart-wrapper">
+        <canvas baseChart
+        [datasets]="radarChartData"
+        [options]="radarChartOptions"
+        [labels]="radarChartLabels"
+        [chartType]="radarChartType">
+      </canvas>
+    </div>
+</mat-card>

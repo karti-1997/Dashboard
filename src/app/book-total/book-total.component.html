@@ -1,0 +1,15 @@
+<mat-card class="disable" style="margin-left: 73%; margin-top: -17%;">
+    <p>Total books on each category</p>
+    <!-- <mat-icon style="margin-left: 300px;">description</mat-icon> -->
+<div>
+    <canvas baseChart 
+        [datasets]="doughnutChartData" 
+        [labels]="doughnutChartLabels" 
+        [options]="doughnutChartOptions"
+        [colors]="doughnutChartColors"
+        [legend]="doughnutChartLegend" 
+        [chartType]="doughnutChartType" 
+        [plugins]="doughnutChartPlugins">
+    </canvas>
+</div>
+</mat-card>

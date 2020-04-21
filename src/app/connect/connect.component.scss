@@ -1,0 +1,24 @@
+.example-card {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 75%;
+    margin: 10px auto;
+  }
+  .example-form {
+    height: 40pvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .example-button{
+    height: 10pvh;
+    color: blue($color: #000000);
+    align-items: center;
+  }
+  footer{
+    padding: 20px;
+    text-align: center;
+  }
+  
