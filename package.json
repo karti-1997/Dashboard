@@ -25,7 +25,7 @@
     "@angular/router": "~8.2.14",
     "angular-material": "^1.1.21",
     "arraylist": "^0.1.0",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "chartjs-funnel": "^1.0.5",
     "chartjs-plugin-annotation": "^0.5.7",
     "highcharts": "^8.0.1",
